@@ -102,6 +102,20 @@ EOF
     if python3 -m venv "${VENV_DIR}" 2>/dev/null; then
         if "${VENV_DIR}/bin/pip" install --quiet -r "${VENDOR_DIR}/requirements.txt"; then
             echo "Installed Python dependencies into ${VENV_DIR}"
+            SITE_PACKAGES="$("${VENV_DIR}/bin/python" -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])')"
+            cat > "${SITE_PACKAGES}/sitecustomize.py" <<'EOF'
+try:
+    import truststore
+except Exception:
+    truststore = None
+
+if truststore is not None:
+    try:
+        truststore.inject_into_ssl()
+    except Exception:
+        pass
+EOF
+            echo "Installed trust-store startup hook into ${SITE_PACKAGES}"
         else
             echo "Dependency install failed. Retry manually:"
             echo "  ${VENV_DIR}/bin/pip install -r ${VENDOR_DIR}/requirements.txt"

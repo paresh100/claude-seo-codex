@@ -22,6 +22,12 @@ import sys
 import time
 from typing import Optional
 
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
+
 CONFIG_PATH = os.path.expanduser("~/.config/claude-seo/google-api.json")
 TOKEN_PATH = os.path.expanduser("~/.config/claude-seo/oauth-token.json")
 

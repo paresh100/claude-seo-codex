@@ -15,6 +15,12 @@ from typing import Optional
 from urllib.parse import urlparse
 
 try:
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
+
+try:
     import requests
 except ImportError:
     print("Error: requests library required. Install with: pip install requests")

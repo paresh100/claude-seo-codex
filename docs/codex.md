@@ -15,6 +15,7 @@ That installer will:
 - copy this repo to `~/.codex/vendor/claude-seo`
 - create a Codex skill at `~/.codex/skills/seo`
 - install Python dependencies into `~/.codex/vendor/claude-seo/.venv` when possible
+- enable OS-native trust-store support for more reliable HTTPS requests
 
 ## Use in Codex
 
