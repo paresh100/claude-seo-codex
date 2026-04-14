@@ -44,9 +44,40 @@ This skill is a Codex wrapper around the vendor content installed at:
 
 ## Invocation model
 
-- Do not expect Claude slash commands.
-- Interpret natural-language requests directly.
-- If the user writes a Claude-style command such as \`/seo audit https://example.com\`, treat it as a normal request to audit that site.
+- Support both natural-language requests and a limited Claude-style slash-command shim.
+- If the user request is natural language, route by intent.
+- If the user request starts with \`/seo\`, parse it according to the command shim below.
+
+## Slash-command shim
+
+If the user input is exactly \`/seo\`, print this compact help:
+
+\`\`\`
+Available SEO commands in Codex:
+  /seo
+  /seo audit <url>
+  /seo backlinks <url>
+  /seo images serp <keyword>
+  /seo images optimize <path>
+
+Examples:
+  /seo audit https://example.com
+  /seo backlinks https://example.com
+  /seo images serp digital marketing agency
+  /seo images optimize /path/to/image.jpg
+\`\`\`
+
+Parse these exact patterns:
+
+- \`/seo audit <url>\` -> route to the full website audit flow
+- \`/seo backlinks <url>\` -> route to the backlink analysis flow
+- \`/seo images serp <keyword>\` -> route to the image SERP flow
+- \`/seo images optimize <path>\` -> route to the image optimization flow
+
+If the user enters another \`/seo ...\` command that is not listed above:
+- explain that the Codex slash-command shim currently supports only those 4 operational commands plus bare \`/seo\`
+- print the help block above
+- suggest the natural-language equivalent when possible
 
 ## Routing
 
@@ -86,7 +117,8 @@ This skill is a Codex wrapper around the vendor content installed at:
 
 ## Compatibility notes
 
-- The upstream docs use Claude slash commands like \`/seo audit\`. In Codex, the equivalent is a plain request such as "run a full SEO audit for https://example.com".
+- The upstream docs use many Claude slash commands. This Codex wrapper explicitly supports a small shim for \`/seo\`, \`/seo audit\`, \`/seo backlinks\`, \`/seo images serp\`, and \`/seo images optimize\`.
+- For all other upstream commands, prefer plain requests such as "run a full SEO audit for https://example.com".
 - The upstream plugin marketplace instructions do not apply here. This wrapper is the Codex entrypoint.
 EOF
 

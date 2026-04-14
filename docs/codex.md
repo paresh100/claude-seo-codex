@@ -19,7 +19,8 @@ That installer will:
 
 ## Use in Codex
 
-Codex does not use Claude slash commands. Ask naturally instead.
+Codex works best with natural-language requests, but this adaptation also
+includes a small slash-command shim for the most common Claude-style commands.
 
 Examples:
 
@@ -30,7 +31,17 @@ run a technical SEO audit for https://example.com
 analyze backlinks for https://example.com
 ```
 
-If you paste a Claude command such as `/seo audit https://example.com`, the wrapper skill is designed to treat that as a normal request.
+Supported slash-command shim:
+
+```text
+/seo
+/seo audit https://example.com
+/seo backlinks https://example.com
+/seo images serp digital marketing agency
+/seo images optimize /path/to/image.jpg
+```
+
+See [codex-commands.md](codex-commands.md) for the command list.
 
 ## Remove
 
