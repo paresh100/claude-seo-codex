@@ -39,6 +39,16 @@ Comprehensive SEO analysis skill for Claude Code. Covers technical SEO, on-page 
 /plugin install claude-seo@AgriciDaniel-claude-seo
 ```
 
+### Codex Install
+
+```bash
+git clone --depth 1 https://github.com/AgriciDaniel/claude-seo.git
+bash claude-seo/install-codex.sh
+```
+
+This installs a Codex-native wrapper skill at `~/.codex/skills/seo` and vendors
+the repository into `~/.codex/vendor/claude-seo`.
+
 ### Manual Install (Unix/macOS/Linux)
 
 ```bash
