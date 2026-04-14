@@ -2,16 +2,20 @@
 
 ![Claude SEO](screenshots/cover-image.jpeg)
 
-# Claude SEO - SEO Audit Skill for Claude Code
+# Claude SEO for Codex
 
-Comprehensive SEO analysis skill for Claude Code. Covers technical SEO, on-page analysis, content quality (E-E-A-T), schema markup, image optimization, sitemap architecture, AI search optimization (GEO), local SEO, maps intelligence, Google SEO APIs (Search Console, PageSpeed, CrUX, GA4), PDF report generation, and strategic planning.
+Codex-adapted fork of [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo).
+This repo keeps the upstream SEO skill set and adds a Codex-native install flow so
+you can use the toolkit from Codex without relying on Claude plugin commands.
 
 ![SEO Command Demo](screenshots/seo-command-demo.gif)
 
-[![CI](https://github.com/AgriciDaniel/claude-seo/actions/workflows/ci.yml/badge.svg)](https://github.com/AgriciDaniel/claude-seo/actions/workflows/ci.yml)
+[![CI](https://github.com/paresh100/claude-seo-codex/actions/workflows/ci.yml/badge.svg)](https://github.com/paresh100/claude-seo-codex/actions/workflows/ci.yml)
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-blue)](https://claude.ai/claude-code)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/github/v/release/AgriciDaniel/claude-seo)](https://github.com/AgriciDaniel/claude-seo/releases)
+
+The original project remains Claude Code-first. This fork is for Codex use,
+local installation, and personal maintenance under your own GitHub account.
 
 ## Table of Contents
 
@@ -42,7 +46,7 @@ Comprehensive SEO analysis skill for Claude Code. Covers technical SEO, on-page 
 ### Codex Install
 
 ```bash
-git clone --depth 1 https://github.com/AgriciDaniel/claude-seo.git
+git clone --depth 1 https://github.com/paresh100/claude-seo-codex.git
 bash claude-seo/install-codex.sh
 ```
 
