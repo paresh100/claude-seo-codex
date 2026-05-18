@@ -4,9 +4,9 @@ message: >-
   If you use this software, please cite it using the metadata from this file.
 type: software
 authors:
-  - alias: AgriciDaniel
-repository-code: 'https://github.com/AgriciDaniel/claude-seo'
-url: 'https://github.com/AgriciDaniel/claude-seo'
+  - alias: paresh100
+repository-code: 'https://github.com/paresh100/claude-seo-codex'
+url: 'https://github.com/paresh100/claude-seo-codex'
 license: MIT
 version: 1.8.2
 date-released: '2026-04-10'
@@ -17,3 +17,4 @@ keywords:
   - schema-markup
   - e-e-a-t
   - geo
+
