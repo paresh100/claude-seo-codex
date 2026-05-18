@@ -7,10 +7,10 @@ set -euo pipefail
 main() {
     SKILL_DIR="${HOME}/.claude/skills/seo"
     AGENT_DIR="${HOME}/.claude/agents"
-    REPO_URL="https://github.com/AgriciDaniel/claude-seo"
+    REPO_URL="https://github.com/paresh100/claude-seo-codex"
     # Pin to a specific release tag to prevent silent updates from main.
     # Override: CLAUDE_SEO_TAG=main bash install.sh
-    REPO_TAG="${CLAUDE_SEO_TAG:-v1.8.2}"
+    REPO_TAG="${CLAUDE_SEO_TAG:-main}"
 
     echo "════════════════════════════════════════"
     echo "║   Claude SEO - Installer             ║"
