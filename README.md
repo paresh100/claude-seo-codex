@@ -4,9 +4,7 @@
 
 # Claude SEO for Codex
 
-Codex-adapted fork of [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo).
-This repo keeps the upstream SEO skill set and adds a Codex-native install flow so
-you can use the toolkit from Codex without relying on Claude plugin commands.
+Codex-native SEO skill set — install and run from Codex without relying on Claude plugin commands.
 
 ![SEO Command Demo](screenshots/seo-command-demo.gif)
 
@@ -390,23 +388,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting PRs.
 
----
 
-Built for Claude Code by [@AgriciDaniel](https://github.com/AgriciDaniel)
-
----
-
-## Publishing Pipeline
-
-For a full GUI-based publishing workflow from SEO research to published content, see [Rankenstein](https://rankenstein.pro) - the AI content engine built on the same SEO principles.
-
----
-
-## Author
-
-Built by [Agrici Daniel](https://agricidaniel.com/about) - AI Workflow Architect.
-
-- [Blog](https://agricidaniel.com/blog) - Deep dives on AI marketing automation
-- [AI Marketing Hub](https://www.skool.com/ai-marketing-hub) - Free community, 2,800+ members
-- [YouTube](https://www.youtube.com/@AgriciDaniel) - Tutorials and demos
-- [All open-source tools](https://github.com/AgriciDaniel)
