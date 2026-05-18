@@ -2,9 +2,9 @@
 
 ![Claude SEO](screenshots/cover-image.jpeg)
 
-# Claude SEO for Codex
+# Claude SEO
 
-Codex-native SEO skill set — install and run from Codex without relying on Claude plugin commands.
+Comprehensive SEO analysis toolkit for Claude Code — technical audits, schema, GEO, content quality, and more.
 
 ![SEO Command Demo](screenshots/seo-command-demo.gif)
 
